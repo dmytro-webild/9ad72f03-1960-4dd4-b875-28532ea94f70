@@ -56,7 +56,7 @@ export default function Home() {
           tag="Premium Fitness Experience"
           tagIcon={Dumbbell}
           background={{ variant: "plain" }}
-          galleryItems={[
+          mediaItems={[
             {
               imageSrc: getAssetUrl("hero-gym-training"),
               imageAlt: "Professional gym training environment"
@@ -80,7 +80,7 @@ export default function Home() {
           ]}
           tagAnimation="slide-up"
           buttonAnimation="slide-up"
-          galleryAnimation="slide-up"
+          mediaAnimation="slide-up"
         />
       </div>
 
