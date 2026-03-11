@@ -1,7 +1,6 @@
 "use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
-import NavbarStyleFullscreen from '@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen';
 import HeroSplitDualMedia from '@/components/sections/hero/HeroSplitDualMedia';
 import FeatureCardTwentyOne from '@/components/sections/feature/FeatureCardTwentyOne';
 import ProductCardTwo from '@/components/sections/product/ProductCardTwo';
@@ -10,33 +9,42 @@ import TestimonialCardTwelve from '@/components/sections/testimonial/Testimonial
 import TeamCardTwo from '@/components/sections/team/TeamCardTwo';
 import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterMedia from '@/components/sections/footer/FooterMedia';
+import NavbarStyleFullscreen from '@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen';
 import { Dumbbell, Star, Target, Heart, Zap } from 'lucide-react';
 
-export default function LandingPage() {
+const ASSET_MAP: Record<string, string> = {
+  "hero-gym-training": "http://img.b2bpic.net/free-photo/training-items-athletics_23-2151077753.jpg",  "hero-gym-secondary": "http://img.b2bpic.net/free-photo/woman-takes-dumbbell-from-rack-gym-close-up-her-hand_169016-46934.jpg",  "transformation-before-after": "http://img.b2bpic.net/free-photo/fitness-girl-making-flexing-exercise_23-2148017401.jpg",  "transformation-secondary": "http://img.b2bpic.net/free-photo/man-stretching-gym_23-2148024326.jpg",  "gallery-interior-1": "http://img.b2bpic.net/free-photo/young-brunette-sexy-slim-girl-doing-workout-gym_627829-9245.jpg",  "gallery-interior-2": "http://img.b2bpic.net/free-photo/abstract-blur_74190-1300.jpg",  "gallery-training-1": "http://img.b2bpic.net/free-photo/woman-helping-man-workout-gym-medium-shot_23-2149740188.jpg",  "gallery-training-2": "http://img.b2bpic.net/free-photo/full-shot-fit-people-training-outdoors_52683-136415.jpg",  "testimonial-1": "http://img.b2bpic.net/free-photo/portrait-cheerful-handsome-muscular-guy-listening-music-headset_8353-6827.jpg",  "testimonial-2": "http://img.b2bpic.net/free-photo/sportswoman-carries-rubber-fitness-mat-yoga-practice-looks-seriously-camera-exercises-regularly-stay-healthy-dressed-activewear-poses-blurred_273609-53916.jpg",  "testimonial-3": "http://img.b2bpic.net/free-photo/joyful-young-sporty-man-wearing-wristband-holding-dumbbell-doing-strong-gesture-isolated-orange-background_141793-63068.jpg",  "testimonial-4": "http://img.b2bpic.net/free-photo/middle-aged-fitness-woman-sport-activewear-cross-arms-chest-smiling-being-healthy-fit-training-exercising-white-background_176420-50325.jpg",  "testimonial-5": "http://img.b2bpic.net/free-photo/medium-shot-man-exercising-gym_23-2149517255.jpg",  "testimonial-6": "http://img.b2bpic.net/free-photo/portrait-smiling-fitness-woman-stretching-her-hands_171337-6243.jpg",  "contact-form-background": "http://img.b2bpic.net/free-photo/group-women-relaxing-after-work-out_23-2148387772.jpg"
+};
+
+function getAssetUrl(assetId: string): string {
+  return ASSET_MAP[assetId] || "/placeholders/placeholder1.webp";
+}
+
+export default function Home() {
   return (
     <ThemeProvider
-      defaultButtonVariant="text-shift"
-      defaultTextAnimation="reveal-blur"
-      borderRadius="pill"
-      contentWidth="small"
+      defaultButtonVariant="text-stagger"
+      defaultTextAnimation="entrance-slide"
+      borderRadius="rounded"
+      contentWidth="medium"
       sizing="medium"
-      background="floatingGradient"
-      cardStyle="outline"
-      primaryButtonStyle="double-inset"
-      secondaryButtonStyle="layered"
+      background="circleGradient"
+      cardStyle="glass-elevated"
+      primaryButtonStyle="gradient"
+      secondaryButtonStyle="glass"
       headingFontWeight="normal"
     >
       <div id="nav" data-section="nav">
         <NavbarStyleFullscreen
           navItems={[
-            { name: "Why Us", id: "why-us" },
-            { name: "Services", id: "services" },
-            { name: "Testimonials", id: "testimonials" },
-            { name: "Gallery", id: "gallery" },
-            { name: "Contact", id: "membership" }
+            { name: "Home", id: "/" },
+            { name: "Why Us", id: "#why-us" },
+            { name: "Services", id: "#services" },
+            { name: "Gallery", id: "#gallery" },
+            { name: "Contact", id: "#membership" }
           ]}
           brandName="The Royal Fitness 2.0"
-          bottomLeftText="Dalibari, Assam"
+          bottomLeftText="Global Fitness Community"
           bottomRightText="+91 99573 80670"
         />
       </div>
@@ -47,22 +55,24 @@ export default function LandingPage() {
           description="Professional trainers, premium equipment, and a motivating environment. Join 60+ satisfied members who have transformed their fitness journey at The Royal Fitness 2.0."
           tag="Premium Fitness Experience"
           tagIcon={Dumbbell}
-          tagAnimation="slide-up"
           background={{ variant: "plain" }}
           rating={5}
           ratingText="⭐ 4.9 Rating from 60+ Reviews"
           mediaItems={[
             {
-              imageSrc: "http://img.b2bpic.net/free-photo/training-items-athletics_23-2151077753.jpg",              imageAlt: "Professional gym training environment"
+              imageSrc: getAssetUrl("hero-gym-training"),
+              imageAlt: "Professional gym training environment"
             },
             {
-              imageSrc: "http://img.b2bpic.net/free-photo/woman-takes-dumbbell-from-rack-gym-close-up-her-hand_169016-46934.jpg",              imageAlt: "Certified trainer providing personalized guidance"
+              imageSrc: getAssetUrl("hero-gym-secondary"),
+              imageAlt: "Certified trainer providing personalized guidance"
             }
           ]}
           buttons={[
             { text: "📞 Call Now: +91 99573 80670", href: "tel:+919957380670" },
             { text: "Get Membership Info", href: "#membership" }
           ]}
+          tagAnimation="slide-up"
           buttonAnimation="slide-up"
           mediaAnimation="slide-up"
         />
@@ -74,8 +84,7 @@ export default function LandingPage() {
           description="We combine professional expertise with a welcoming environment to help you achieve your fitness goals."
           tag="Premium Standards"
           tagIcon={Star}
-          tagAnimation="slide-up"
-          imageSrc="http://img.b2bpic.net/free-photo/young-brunette-sexy-slim-girl-doing-workout-gym_627829-9245.jpg"
+          imageSrc={getAssetUrl("gallery-interior-1")}
           imageAlt="Modern, clean gym facility"
           accordionItems={[
             {
@@ -97,6 +106,7 @@ export default function LandingPage() {
           buttons={[{ text: "Start Your Journey", href: "#membership" }]}
           useInvertedBackground={false}
           mediaPosition="right"
+          tagAnimation="slide-up"
           buttonAnimation="slide-up"
           mediaAnimation="slide-up"
         />
@@ -114,27 +124,33 @@ export default function LandingPage() {
           products={[
             {
               id: "1",              brand: "The Royal Fitness 2.0",              name: "Strength Training Programs",              price: "Custom Plans",              rating: 5,
-              reviewCount: "50+",              imageSrc: "http://img.b2bpic.net/free-photo/training-items-athletics_23-2151077753.jpg",              imageAlt: "Strength training equipment and coaching"
+              reviewCount: "50+",              imageSrc: getAssetUrl("hero-gym-training"),
+              imageAlt: "Strength training equipment and coaching"
             },
             {
               id: "2",              brand: "The Royal Fitness 2.0",              name: "Weight Loss Programs",              price: "Custom Plans",              rating: 5,
-              reviewCount: "45+",              imageSrc: "http://img.b2bpic.net/free-photo/woman-helping-man-workout-gym-medium-shot_23-2149740188.jpg",              imageAlt: "Professional trainer assisting with form"
+              reviewCount: "45+",              imageSrc: getAssetUrl("gallery-training-1"),
+              imageAlt: "Professional trainer assisting with form"
             },
             {
               id: "3",              brand: "The Royal Fitness 2.0",              name: "Personal Training",              price: "Custom Plans",              rating: 5,
-              reviewCount: "52+",              imageSrc: "http://img.b2bpic.net/free-photo/abstract-blur_74190-1300.jpg",              imageAlt: "One-on-one personal training session"
+              reviewCount: "52+",              imageSrc: getAssetUrl("gallery-interior-2"),
+              imageAlt: "One-on-one personal training session"
             },
             {
               id: "4",              brand: "The Royal Fitness 2.0",              name: "Beginner Fitness Plans",              price: "Custom Plans",              rating: 5,
-              reviewCount: "48+",              imageSrc: "http://img.b2bpic.net/free-photo/full-shot-fit-people-training-outdoors_52683-136415.jpg",              imageAlt: "Beginner-friendly group fitness class"
+              reviewCount: "48+",              imageSrc: getAssetUrl("gallery-training-2"),
+              imageAlt: "Beginner-friendly group fitness class"
             },
             {
               id: "5",              brand: "The Royal Fitness 2.0",              name: "Body Transformation",              price: "Custom Plans",              rating: 5,
-              reviewCount: "43+",              imageSrc: "http://img.b2bpic.net/free-photo/fitness-girl-making-flexing-exercise_23-2148017401.jpg",              imageAlt: "Member transformation success"
+              reviewCount: "43+",              imageSrc: getAssetUrl("transformation-before-after"),
+              imageAlt: "Member transformation success"
             },
             {
               id: "6",              brand: "The Royal Fitness 2.0",              name: "Nutritional Guidance",              price: "Custom Plans",              rating: 5,
-              reviewCount: "40+",              imageSrc: "http://img.b2bpic.net/free-photo/woman-takes-dumbbell-from-rack-gym-close-up-her-hand_169016-46934.jpg",              imageAlt: "Fitness and nutrition consultation"
+              reviewCount: "40+",              imageSrc: getAssetUrl("hero-gym-secondary"),
+              imageAlt: "Fitness and nutrition consultation"
             }
           ]}
         />
@@ -144,14 +160,13 @@ export default function LandingPage() {
         <MetricSplitMediaAbout
           tag="Success Stories"
           tagIcon={Target}
-          tagAnimation="slide-up"
           title="Your Transformation Starts Here"
           description="At The Royal Fitness 2.0, we don't just provide equipment—we provide the expertise, support, and motivation to help you achieve real results. See how our members have transformed their lives."
           metrics={[
             { value: "100+", title: "Successful Transformations" },
             { value: "24/7", title: "Access to Premium Facility" }
           ]}
-          imageSrc="http://img.b2bpic.net/free-photo/man-stretching-gym_23-2148024326.jpg"
+          imageSrc={getAssetUrl("transformation-secondary")}
           imageAlt="Member fitness transformation and achievement"
           useInvertedBackground={true}
           mediaAnimation="slide-up"
@@ -163,22 +178,28 @@ export default function LandingPage() {
         <TestimonialCardTwelve
           testimonials={[
             {
-              id: "1",              name: "Rajesh Kumar",              imageSrc: "http://img.b2bpic.net/free-photo/portrait-cheerful-handsome-muscular-guy-listening-music-headset_8353-6827.jpg",              imageAlt: "Rajesh Kumar testimonial"
+              id: "1",              name: "Rajesh Kumar",              imageSrc: getAssetUrl("testimonial-1"),
+              imageAlt: "Rajesh Kumar testimonial"
             },
             {
-              id: "2",              name: "Priya Singh",              imageSrc: "http://img.b2bpic.net/free-photo/sportswoman-carries-rubber-fitness-mat-yoga-practice-looks-seriously-camera-exercises-regularly-stay-healthy-dressed-activewear-poses-blurred_273609-53916.jpg",              imageAlt: "Priya Singh testimonial"
+              id: "2",              name: "Priya Singh",              imageSrc: getAssetUrl("testimonial-2"),
+              imageAlt: "Priya Singh testimonial"
             },
             {
-              id: "3",              name: "Arjun Patel",              imageSrc: "http://img.b2bpic.net/free-photo/joyful-young-sporty-man-wearing-wristband-holding-dumbbell-doing-strong-gesture-isolated-orange-background_141793-63068.jpg",              imageAlt: "Arjun Patel testimonial"
+              id: "3",              name: "Arjun Patel",              imageSrc: getAssetUrl("testimonial-3"),
+              imageAlt: "Arjun Patel testimonial"
             },
             {
-              id: "4",              name: "Sneha Sharma",              imageSrc: "http://img.b2bpic.net/free-photo/middle-aged-fitness-woman-sport-activewear-cross-arms-chest-smiling-being-healthy-fit-training-exercising-white-background_176420-50325.jpg",              imageAlt: "Sneha Sharma testimonial"
+              id: "4",              name: "Sneha Sharma",              imageSrc: getAssetUrl("testimonial-4"),
+              imageAlt: "Sneha Sharma testimonial"
             },
             {
-              id: "5",              name: "Vikram Singh",              imageSrc: "http://img.b2bpic.net/free-photo/medium-shot-man-exercising-gym_23-2149517255.jpg",              imageAlt: "Vikram Singh testimonial"
+              id: "5",              name: "Vikram Singh",              imageSrc: getAssetUrl("testimonial-5"),
+              imageAlt: "Vikram Singh testimonial"
             },
             {
-              id: "6",              name: "Anjali Verma",              imageSrc: "http://img.b2bpic.net/free-photo/portrait-smiling-fitness-woman-stretching-her-hands_171337-6243.jpg",              imageAlt: "Anjali Verma testimonial"
+              id: "6",              name: "Anjali Verma",              imageSrc: getAssetUrl("testimonial-6"),
+              imageAlt: "Anjali Verma testimonial"
             }
           ]}
           cardTitle="Excellent trainers, amazing facility and great environment. Best place for muscles and strength training in Dalibari."
@@ -194,23 +215,26 @@ export default function LandingPage() {
           title="Gallery - Our Facility & Members"
           description="Explore The Royal Fitness 2.0's state-of-the-art equipment, clean facility, and vibrant community of fitness enthusiasts."
           tag="Visual Tour"
-          tagAnimation="slide-up"
           textboxLayout="default"
           animationType="slide-up"
           useInvertedBackground={false}
           gridVariant="three-columns-all-equal-width"
           members={[
             {
-              id: "1",              name: "Gym Interior",              role: "Premium Facility",              description: "State-of-the-art equipment and spacious training areas designed for optimal workouts.",              imageSrc: "http://img.b2bpic.net/free-photo/young-brunette-sexy-slim-girl-doing-workout-gym_627829-9245.jpg",              imageAlt: "Modern gym interior"
+              id: "1",              name: "Gym Interior",              role: "Premium Facility",              description: "State-of-the-art equipment and spacious training areas designed for optimal workouts.",              imageSrc: getAssetUrl("gallery-interior-1"),
+              imageAlt: "Modern gym interior"
             },
             {
-              id: "2",              name: "Equipment Zone",              role: "Premium Equipment",              description: "Comprehensive range of modern machinery for strength training and cardio fitness.",              imageSrc: "http://img.b2bpic.net/free-photo/abstract-blur_74190-1300.jpg",              imageAlt: "Gym equipment and machines"
+              id: "2",              name: "Equipment Zone",              role: "Premium Equipment",              description: "Comprehensive range of modern machinery for strength training and cardio fitness.",              imageSrc: getAssetUrl("gallery-interior-2"),
+              imageAlt: "Gym equipment and machines"
             },
             {
-              id: "3",              name: "Personal Training",              role: "Expert Coaching",              description: "One-on-one sessions with certified trainers ensuring proper form and maximum results.",              imageSrc: "http://img.b2bpic.net/free-photo/woman-helping-man-workout-gym-medium-shot_23-2149740188.jpg",              imageAlt: "Personal training session"
+              id: "3",              name: "Personal Training",              role: "Expert Coaching",              description: "One-on-one sessions with certified trainers ensuring proper form and maximum results.",              imageSrc: getAssetUrl("gallery-training-1"),
+              imageAlt: "Personal training session"
             },
             {
-              id: "4",              name: "Community Workouts",              role: "Group Fitness",              description: "Join our vibrant community for group classes and motivational training sessions.",              imageSrc: "http://img.b2bpic.net/free-photo/full-shot-fit-people-training-outdoors_52683-136415.jpg",              imageAlt: "Group fitness class"
+              id: "4",              name: "Community Workouts",              role: "Group Fitness",              description: "Join our vibrant community for group classes and motivational training sessions.",              imageSrc: getAssetUrl("gallery-training-2"),
+              imageAlt: "Group fitness class"
             }
           ]}
         />
@@ -220,12 +244,11 @@ export default function LandingPage() {
         <ContactSplit
           tag="Get Started"
           tagIcon={Zap}
-          tagAnimation="slide-up"
           title="Claim Your Membership Today"
           description="Join The Royal Fitness 2.0 and start your transformation. Fill out the form below and our team will contact you within 24 hours with personalized membership options."
           background={{ variant: "plain" }}
           useInvertedBackground={false}
-          imageSrc="http://img.b2bpic.net/free-photo/group-women-relaxing-after-work-out_23-2148387772.jpg"
+          imageSrc={getAssetUrl("contact-form-background")}
           imageAlt="Fitness membership inquiry"
           mediaPosition="right"
           inputPlaceholder="Enter your email or phone"
@@ -237,7 +260,7 @@ export default function LandingPage() {
 
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="http://img.b2bpic.net/free-photo/training-items-athletics_23-2151077753.jpg"
+          imageSrc={getAssetUrl("hero-gym-training")}
           imageAlt="The Royal Fitness 2.0 - Premium gym facility"
           logoText="The Royal Fitness 2.0"
           copyrightText="© 2025 | The Royal Fitness 2.0. All rights reserved."
