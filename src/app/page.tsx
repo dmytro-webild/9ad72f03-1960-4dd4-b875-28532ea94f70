@@ -7,10 +7,9 @@ import ProductCardTwo from '@/components/sections/product/ProductCardTwo';
 import MetricSplitMediaAbout from '@/components/sections/about/MetricSplitMediaAbout';
 import TestimonialCardTwelve from '@/components/sections/testimonial/TestimonialCardTwelve';
 import TeamCardTwo from '@/components/sections/team/TeamCardTwo';
-import ContactSplit from '@/components/sections/contact/ContactSplit';
 import FooterMedia from '@/components/sections/footer/FooterMedia';
 import NavbarStyleFullscreen from '@/components/navbar/NavbarStyleFullscreen/NavbarStyleFullscreen';
-import { Dumbbell, Star, Target, Heart, Zap } from 'lucide-react';
+import { Dumbbell, Star, Target, Heart } from 'lucide-react';
 
 const ASSET_MAP: Record<string, string> = {
   "hero-gym-training": "http://img.b2bpic.net/free-photo/training-items-athletics_23-2151077753.jpg",  "hero-gym-secondary": "http://img.b2bpic.net/free-photo/woman-takes-dumbbell-from-rack-gym-close-up-her-hand_169016-46934.jpg",  "transformation-before-after": "http://img.b2bpic.net/free-photo/fitness-girl-making-flexing-exercise_23-2148017401.jpg",  "transformation-secondary": "http://img.b2bpic.net/free-photo/man-stretching-gym_23-2148024326.jpg",  "gallery-interior-1": "http://img.b2bpic.net/free-photo/young-brunette-sexy-slim-girl-doing-workout-gym_627829-9245.jpg",  "gallery-interior-2": "http://img.b2bpic.net/free-photo/abstract-blur_74190-1300.jpg",  "gallery-training-1": "http://img.b2bpic.net/free-photo/woman-helping-man-workout-gym-medium-shot_23-2149740188.jpg",  "gallery-training-2": "http://img.b2bpic.net/free-photo/full-shot-fit-people-training-outdoors_52683-136415.jpg",  "testimonial-1": "http://img.b2bpic.net/free-photo/portrait-cheerful-handsome-muscular-guy-listening-music-headset_8353-6827.jpg",  "testimonial-2": "http://img.b2bpic.net/free-photo/sportswoman-carries-rubber-fitness-mat-yoga-practice-looks-seriously-camera-exercises-regularly-stay-healthy-dressed-activewear-poses-blurred_273609-53916.jpg",  "testimonial-3": "http://img.b2bpic.net/free-photo/joyful-young-sporty-man-wearing-wristband-holding-dumbbell-doing-strong-gesture-isolated-orange-background_141793-63068.jpg",  "testimonial-4": "http://img.b2bpic.net/free-photo/middle-aged-fitness-woman-sport-activewear-cross-arms-chest-smiling-being-healthy-fit-training-exercising-white-background_176420-50325.jpg",  "testimonial-5": "http://img.b2bpic.net/free-photo/medium-shot-man-exercising-gym_23-2149517255.jpg",  "testimonial-6": "http://img.b2bpic.net/free-photo/portrait-smiling-fitness-woman-stretching-her-hands_171337-6243.jpg",  "contact-form-background": "http://img.b2bpic.net/free-photo/group-women-relaxing-after-work-out_23-2148387772.jpg"
@@ -41,7 +40,7 @@ export default function Home() {
             { name: "Why Us", id: "#why-us" },
             { name: "Services", id: "#services" },
             { name: "Gallery", id: "#gallery" },
-            { name: "Contact", id: "#membership" }
+            { name: "Contact", id: "#contact" }
           ]}
           brandName="The Royal Fitness 2.0"
           bottomLeftText="Global Fitness Community"
@@ -76,7 +75,7 @@ export default function Home() {
           ]}
           buttons={[
             { text: "📞 Call Now: +91 99573 80670", href: "tel:+919957380670" },
-            { text: "Get Membership Info", href: "#membership" }
+            { text: "Get Membership Info", href: "#contact" }
           ]}
           tagAnimation="slide-up"
           buttonAnimation="slide-up"
@@ -109,7 +108,7 @@ export default function Home() {
               id: "5",              title: "24-Hour Access",              content: "Flexibility to work out whenever it suits your schedule. Our gym is open 24 hours a day for dedicated fitness enthusiasts."
             }
           ]}
-          buttons={[{ text: "Start Your Journey", href: "#membership" }]}
+          buttons={[{ text: "Start Your Journey", href: "#contact" }]}
           useInvertedBackground={false}
           mediaPosition="right"
           tagAnimation="slide-up"
@@ -246,22 +245,25 @@ export default function Home() {
         />
       </div>
 
-      <div id="membership" data-section="membership">
-        <ContactSplit
-          tag="Get Started"
-          tagIcon={Zap}
-          title="Claim Your Membership Today"
-          description="Join The Royal Fitness 2.0 and start your transformation. Fill out the form below and our team will contact you within 24 hours with personalized membership options."
-          background={{ variant: "plain" }}
-          useInvertedBackground={false}
-          imageSrc={getAssetUrl("contact-form-background")}
-          imageAlt="Fitness membership inquiry"
-          mediaPosition="right"
-          inputPlaceholder="Enter your email or phone"
-          buttonText="Get Membership Details"
-          termsText="We will contact you within 24 hours. Your privacy is important to us."
-          mediaAnimation="slide-up"
-        />
+      <div id="contact" data-section="contact">
+        <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-transparent to-background/5 py-12">
+          <div className="max-w-2xl mx-auto px-4 text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h2>
+            <p className="text-lg text-foreground/70 mb-8">Join The Royal Fitness 2.0 and start your transformation today. Contact us for membership details and personalized fitness plans.</p>
+            
+            <div className="space-y-4 mb-8">
+              <p className="text-foreground/80">
+                <strong>📞 Phone:</strong> <a href="tel:+919957380670" className="text-primary-cta hover:underline">+91 99573 80670</a>
+              </p>
+              <p className="text-foreground/80">
+                <strong>📍 Location:</strong> No.2 Dalibari, Assam (Above SBI)
+              </p>
+              <p className="text-foreground/80">
+                <strong>⏰ Hours:</strong> Open 24 Hours
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="footer" data-section="footer">
@@ -284,7 +286,7 @@ export default function Home() {
                 { label: "📞 +91 99573 80670", href: "tel:+919957380670" },
                 { label: "📍 No.2 Dalibari, Assam (Above SBI)", href: "#" },
                 { label: "⏰ Open 24 Hours", href: "#" },
-                { label: "✉️ Contact Us", href: "#membership" }
+                { label: "✉️ Contact Us", href: "#contact" }
               ]
             },
             {
