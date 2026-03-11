@@ -24,7 +24,7 @@ const SvgTextLogo: React.FC<SvgTextLogoProps> = ({
   const width = totalWidth + padding * 2;
   const height = fontSize + padding * 2;
 
-  let xPosition = padding;
+  const xPosition = padding;
   const yPosition = padding + fontSize * 0.75;
 
   return (
