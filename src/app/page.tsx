@@ -1,7 +1,7 @@
 "use client";
 
 import { ThemeProvider } from "@/providers/themeProvider/ThemeProvider";
-import HeroSplitDualMedia from '@/components/sections/hero/HeroSplitDualMedia';
+import HeroBillboardGallery from '@/components/sections/hero/HeroBillboardGallery';
 import FeatureCardTwentyOne from '@/components/sections/feature/FeatureCardTwentyOne';
 import ProductCardTwo from '@/components/sections/product/ProductCardTwo';
 import MetricSplitMediaAbout from '@/components/sections/about/MetricSplitMediaAbout';
@@ -50,15 +50,13 @@ export default function Home() {
       </div>
 
       <div id="hero" data-section="hero">
-        <HeroSplitDualMedia
+        <HeroBillboardGallery
           title="Build Your Strongest Body at Dalibari's Top-Rated Gym"
           description="Professional trainers, premium equipment, and a motivating environment. Join 60+ satisfied members who have transformed their fitness journey at The Royal Fitness 2.0."
           tag="Premium Fitness Experience"
           tagIcon={Dumbbell}
           background={{ variant: "plain" }}
-          rating={5}
-          ratingText="⭐ 4.9 Rating from 60+ Reviews"
-          mediaItems={[
+          galleryItems={[
             {
               imageSrc: getAssetUrl("hero-gym-training"),
               imageAlt: "Professional gym training environment"
@@ -66,6 +64,14 @@ export default function Home() {
             {
               imageSrc: getAssetUrl("hero-gym-secondary"),
               imageAlt: "Certified trainer providing personalized guidance"
+            },
+            {
+              imageSrc: getAssetUrl("transformation-before-after"),
+              imageAlt: "Member fitness transformation"
+            },
+            {
+              imageSrc: getAssetUrl("gallery-training-1"),
+              imageAlt: "Professional training session"
             }
           ]}
           buttons={[
@@ -74,7 +80,7 @@ export default function Home() {
           ]}
           tagAnimation="slide-up"
           buttonAnimation="slide-up"
-          mediaAnimation="slide-up"
+          galleryAnimation="slide-up"
         />
       </div>
 
