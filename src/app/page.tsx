@@ -53,10 +53,10 @@ export default function LandingPage() {
           ratingText="⭐ 4.9 Rating from 60+ Reviews"
           mediaItems={[
             {
-              imageSrc: "http://img.b2bpic.net/free-photo/training-items-athletics_23-2151077753.jpg",              imageAlt: "Professional gym training environment"
+              imageSrc: "http://img.b2bpic.net/free-photo/training-items-athletics_23-2151077753.jpg?_wi=1",              imageAlt: "Professional gym training environment"
             },
             {
-              imageSrc: "http://img.b2bpic.net/free-photo/woman-takes-dumbbell-from-rack-gym-close-up-her-hand_169016-46934.jpg",              imageAlt: "Certified trainer providing personalized guidance"
+              imageSrc: "http://img.b2bpic.net/free-photo/woman-takes-dumbbell-from-rack-gym-close-up-her-hand_169016-46934.jpg?_wi=1",              imageAlt: "Certified trainer providing personalized guidance"
             }
           ]}
           buttons={[
@@ -75,7 +75,7 @@ export default function LandingPage() {
           tag="Premium Standards"
           tagIcon={Star}
           tagAnimation="slide-up"
-          imageSrc="http://img.b2bpic.net/free-photo/young-brunette-sexy-slim-girl-doing-workout-gym_627829-9245.jpg"
+          imageSrc="http://img.b2bpic.net/free-photo/young-brunette-sexy-slim-girl-doing-workout-gym_627829-9245.jpg?_wi=1"
           imageAlt="Modern, clean gym facility"
           accordionItems={[
             {
@@ -114,19 +114,19 @@ export default function LandingPage() {
           products={[
             {
               id: "1",              brand: "The Royal Fitness 2.0",              name: "Strength Training Programs",              price: "Custom Plans",              rating: 5,
-              reviewCount: "50+",              imageSrc: "http://img.b2bpic.net/free-photo/training-items-athletics_23-2151077753.jpg",              imageAlt: "Strength training equipment and coaching"
+              reviewCount: "50+",              imageSrc: "http://img.b2bpic.net/free-photo/training-items-athletics_23-2151077753.jpg?_wi=2",              imageAlt: "Strength training equipment and coaching"
             },
             {
               id: "2",              brand: "The Royal Fitness 2.0",              name: "Weight Loss Programs",              price: "Custom Plans",              rating: 5,
-              reviewCount: "45+",              imageSrc: "http://img.b2bpic.net/free-photo/woman-helping-man-workout-gym-medium-shot_23-2149740188.jpg",              imageAlt: "Professional trainer assisting with form"
+              reviewCount: "45+",              imageSrc: "http://img.b2bpic.net/free-photo/woman-helping-man-workout-gym-medium-shot_23-2149740188.jpg?_wi=1",              imageAlt: "Professional trainer assisting with form"
             },
             {
               id: "3",              brand: "The Royal Fitness 2.0",              name: "Personal Training",              price: "Custom Plans",              rating: 5,
-              reviewCount: "52+",              imageSrc: "http://img.b2bpic.net/free-photo/abstract-blur_74190-1300.jpg",              imageAlt: "One-on-one personal training session"
+              reviewCount: "52+",              imageSrc: "http://img.b2bpic.net/free-photo/abstract-blur_74190-1300.jpg?_wi=1",              imageAlt: "One-on-one personal training session"
             },
             {
               id: "4",              brand: "The Royal Fitness 2.0",              name: "Beginner Fitness Plans",              price: "Custom Plans",              rating: 5,
-              reviewCount: "48+",              imageSrc: "http://img.b2bpic.net/free-photo/full-shot-fit-people-training-outdoors_52683-136415.jpg",              imageAlt: "Beginner-friendly group fitness class"
+              reviewCount: "48+",              imageSrc: "http://img.b2bpic.net/free-photo/full-shot-fit-people-training-outdoors_52683-136415.jpg?_wi=1",              imageAlt: "Beginner-friendly group fitness class"
             },
             {
               id: "5",              brand: "The Royal Fitness 2.0",              name: "Body Transformation",              price: "Custom Plans",              rating: 5,
@@ -134,7 +134,7 @@ export default function LandingPage() {
             },
             {
               id: "6",              brand: "The Royal Fitness 2.0",              name: "Nutritional Guidance",              price: "Custom Plans",              rating: 5,
-              reviewCount: "40+",              imageSrc: "http://img.b2bpic.net/free-photo/woman-takes-dumbbell-from-rack-gym-close-up-her-hand_169016-46934.jpg",              imageAlt: "Fitness and nutrition consultation"
+              reviewCount: "40+",              imageSrc: "http://img.b2bpic.net/free-photo/woman-takes-dumbbell-from-rack-gym-close-up-her-hand_169016-46934.jpg?_wi=2",              imageAlt: "Fitness and nutrition consultation"
             }
           ]}
         />
@@ -201,16 +201,16 @@ export default function LandingPage() {
           gridVariant="three-columns-all-equal-width"
           members={[
             {
-              id: "1",              name: "Gym Interior",              role: "Premium Facility",              description: "State-of-the-art equipment and spacious training areas designed for optimal workouts.",              imageSrc: "http://img.b2bpic.net/free-photo/young-brunette-sexy-slim-girl-doing-workout-gym_627829-9245.jpg",              imageAlt: "Modern gym interior"
+              id: "1",              name: "Gym Interior",              role: "Premium Facility",              description: "State-of-the-art equipment and spacious training areas designed for optimal workouts.",              imageSrc: "http://img.b2bpic.net/free-photo/young-brunette-sexy-slim-girl-doing-workout-gym_627829-9245.jpg?_wi=2",              imageAlt: "Modern gym interior"
             },
             {
-              id: "2",              name: "Equipment Zone",              role: "Premium Equipment",              description: "Comprehensive range of modern machinery for strength training and cardio fitness.",              imageSrc: "http://img.b2bpic.net/free-photo/abstract-blur_74190-1300.jpg",              imageAlt: "Gym equipment and machines"
+              id: "2",              name: "Equipment Zone",              role: "Premium Equipment",              description: "Comprehensive range of modern machinery for strength training and cardio fitness.",              imageSrc: "http://img.b2bpic.net/free-photo/abstract-blur_74190-1300.jpg?_wi=2",              imageAlt: "Gym equipment and machines"
             },
             {
-              id: "3",              name: "Personal Training",              role: "Expert Coaching",              description: "One-on-one sessions with certified trainers ensuring proper form and maximum results.",              imageSrc: "http://img.b2bpic.net/free-photo/woman-helping-man-workout-gym-medium-shot_23-2149740188.jpg",              imageAlt: "Personal training session"
+              id: "3",              name: "Personal Training",              role: "Expert Coaching",              description: "One-on-one sessions with certified trainers ensuring proper form and maximum results.",              imageSrc: "http://img.b2bpic.net/free-photo/woman-helping-man-workout-gym-medium-shot_23-2149740188.jpg?_wi=2",              imageAlt: "Personal training session"
             },
             {
-              id: "4",              name: "Community Workouts",              role: "Group Fitness",              description: "Join our vibrant community for group classes and motivational training sessions.",              imageSrc: "http://img.b2bpic.net/free-photo/full-shot-fit-people-training-outdoors_52683-136415.jpg",              imageAlt: "Group fitness class"
+              id: "4",              name: "Community Workouts",              role: "Group Fitness",              description: "Join our vibrant community for group classes and motivational training sessions.",              imageSrc: "http://img.b2bpic.net/free-photo/full-shot-fit-people-training-outdoors_52683-136415.jpg?_wi=2",              imageAlt: "Group fitness class"
             }
           ]}
         />
@@ -237,7 +237,7 @@ export default function LandingPage() {
 
       <div id="footer" data-section="footer">
         <FooterMedia
-          imageSrc="http://img.b2bpic.net/free-photo/training-items-athletics_23-2151077753.jpg"
+          imageSrc="http://img.b2bpic.net/free-photo/training-items-athletics_23-2151077753.jpg?_wi=3"
           imageAlt="The Royal Fitness 2.0 - Premium gym facility"
           logoText="The Royal Fitness 2.0"
           copyrightText="© 2025 | The Royal Fitness 2.0. All rights reserved."
